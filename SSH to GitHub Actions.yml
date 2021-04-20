@@ -1,2 +1,0 @@
-- name: SSH to GitHub Actions
-  uses: P3TERX/ssh2actions@v1.0.0
