@@ -1,0 +1,15 @@
+name: Ubuntu
+on: [push]
+  watch:
+    types: started
+jobs:
+  Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
+      host: ${{ secrets.HOST }}
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
+      port: ${{ secrets.PORT }}
+      script: whoami
