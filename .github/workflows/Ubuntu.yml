@@ -1,9 +1,8 @@
 name: Ubuntu
-on: push
-  watch:
-    types: started
+on: [push]
 jobs:
-  Ubuntu:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
     - name: SSH connection to Actions
